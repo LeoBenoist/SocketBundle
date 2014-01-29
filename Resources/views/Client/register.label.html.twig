@@ -1,0 +1,20 @@
+{% if callback == "" %}
+    {% set callback = "function(){}" %}
+{% endif %}
+
+{% if format == "html" %}
+    <script>window.onload = function () {
+            if (window.socket != undefined) {
+                socket.emit('label', '{{label}}');
+                socket.on('{{label}}', {{callback|raw}});
+            }
+        };
+    </script>
+{% elseif format == "html-ajax" %}
+    <script>
+        if (window.socket != undefined) {
+            socket.emit('label', '{{label}}');
+            socket.on('{{label}}', {{callback|raw}});
+        }
+    </script>
+{% else %}if(window.socket != undefined){socket.emit(\'labels\', \'{{ labels|raw }}\');}{% endif %}

@@ -1,0 +1,10 @@
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    <script src="//{{ config.client.hostname }}:{{ config.client.port }}/socket.io/socket.io.js"></script>
+    <script>
+        if (typeof io !== 'undefined') {
+            window.socket = io.connect('//{{ config.client.hostname }}:{{ config.client.port }}');
+            window.socket.emit('session', '{{session}}');
+        }
+    </script>
+    <script src="{{ asset('bundles/leobenoistsocket/js/leobenoist.socket.js') }}"></script>
+{% endif %}

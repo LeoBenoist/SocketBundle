@@ -1,0 +1,14 @@
+services:
+    leobenoist_socket.server:
+        class:  Leobenoist\SocketBundle\Service\ServerService
+        arguments: [@logger, %leobenoist_socket.config%]
+
+    leobenoist_socket.service:
+        class:  Leobenoist\SocketBundle\Service\SocketService
+        arguments: [@leobenoist_socket.server]
+
+    leobenoist_socket.get_session_id:
+        class: Leobenoist\SocketBundle\Service\SocketTwigService
+        arguments: [@session, @security.context, @leobenoist_socket.server, %leobenoist_socket.config%]
+        tags:
+            -  { name: twig.extension }
