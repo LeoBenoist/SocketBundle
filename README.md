@@ -7,7 +7,27 @@ Be Advice this bundle is in developement. Do not use in production.
 
 ## Prerequisites
 
-This version of the bundle requires Symfony 2.1+ and FOSUserBundle.
+    Symfony 2.1+ 
+    FOSUserBundle
+    NodeJS (no knowledge required)
+
+## Supported browsers
+Desktop
+
+    Internet Explorer 5.5+
+    Safari 3+
+    Google Chrome 4+
+    Firefox 3+
+    Opera 10.61+
+
+Mobile
+
+    iPhone Safari
+    iPad Safari
+    Android WebKit
+    WebOs WebKit
+
+
 
 ## Installation
 
