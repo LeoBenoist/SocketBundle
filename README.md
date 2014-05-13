@@ -37,7 +37,7 @@ Installation is a quick 3 step process:
 2. Enable the Bundle
 3. Configure your config.yml
 
-### Step 1: Download SocketBundle using composer (not yet available, waiting stable version)
+### Step 1: Download SocketBundle using composer
 
 Add SocketBundle in your composer.json:
 
