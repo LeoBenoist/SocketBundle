@@ -103,7 +103,7 @@ To do that simply add this code on every page you want to have realtime or direc
 ```
 
 #### Subscribe client to a label (receive update from client side)
-Every update you send will be labeled. You have to say on what page, what update you need and precise what to do with this when received. You could also precise what format will be generated in your twig. For exemple html-ajax will generate a code with <script>.
+Every update you send will be labeled. You have to say on what page, what update you need and precise what to do with this when received. You could also precise what format will be generated in your twig. For exemple html-ajax will generate a code with script html code.
 
 ``` html+jinja
 # src/SomeRandomBundle/Ressources/views/base.html.twig
