@@ -102,8 +102,8 @@ To do that simply add this code on every page you want to have realtime or direc
 {% endif %}
 ```
 
-#### Subscribe client to a label
-Every update you send will labeled. You havee to say on what page, what update you need.
+#### Subscribe client to a label (receive update from client side)
+Every update you send will be labeled. You have to say on what page, what update you need and precise what to do with this when received. You could also precise what format will be generated in your twig. For exemple html-ajax will generate a code with <script>.
 
 ``` html+jinja
 # src/SomeRandomBundle/Ressources/views/base.html.twig
@@ -121,7 +121,7 @@ or
 ##### What's about security
 When you are using this code many things happen, Symfony 2 Backend send to you node js the information that an user will subscription to a specific labal and with this uid. The backend generate the corresponding javascript to allow the clien to connect to the real time server. When the client browser receive this javascript it ask to be registered for this label to the real time server. The real time server check if symfony previouly grant this user and if it's ok the user is granted to the label.
 
-### Server Side
+### Server Side (Send an update)
 
 Easy as possible :
 
